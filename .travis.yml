@@ -3,8 +3,7 @@ language: go
 go_import_path: github.com/foreversmart/mgo
 
 go:
-  - 1.9.x
-  - 1.10.x
+  - 1.13
 
 env:
   global:
@@ -29,6 +28,7 @@ install:
   - go get golang.org/x/lint/golint
 
 before_script:
+  - go mod init github.com/foreversmart/mgo
   - golint  ./... | grep -v 'ID' | cat
   - export NOIPV6=1
   - make startdb
