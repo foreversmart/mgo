@@ -1,8 +1,15 @@
-[![Build Status](https://travis-ci.org/globalsign/mgo.svg?branch=master)](https://travis-ci.org/globalsign/mgo) [![GoDoc](https://godoc.org/github.com/globalsign/mgo?status.svg)](https://godoc.org/github.com/globalsign/mgo)
+[![Build Status](https://travis-ci.org/globalsign/mgo.svg?branch=master)](https://travis-ci.org/foreversmart/mgo) [![GoDoc](https://godoc.org/github.com/foreversmart/mgo?status.svg)](https://godoc.org/github.com/foreversmart/mgo)
+
 
 The MongoDB driver for Go
 -------------------------
 
+# MongoDB 驱动
+从 github.com/globalsign/mgo fork 出来主要解决一些不想要的新特性和 bug 修复
+
+* 去掉这个特性 Consistently unmarshal time.Time values as UTC ([details](https://github.com/globalsign/mgo/pull/42)) 让 umarshal 出来的 time.Time 和本地的时间保持一致
+
+------------------------------
 This fork has had a few improvements by ourselves as well as several PR's merged from the original mgo repo that are currently awaiting review.
 Changes are mostly geared towards performance improvements and bug fixes, though a few new features have been added.
 
