@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/globalsign/mgo.svg?branch=master)](https://travis-ci.org/foreversmart/mgo) [![GoDoc](https://godoc.org/github.com/foreversmart/mgo?status.svg)](https://godoc.org/github.com/foreversmart/mgo)
+[![Build Status](https://api.travis-ci.com/foreversmart/mgo.svg?branch=master)](https://travis-ci.org/foreversmart/mgo) [![GoDoc](https://godoc.org/github.com/foreversmart/mgo?status.svg)](https://godoc.org/github.com/foreversmart/mgo)
 
 
 The MongoDB driver for Go
