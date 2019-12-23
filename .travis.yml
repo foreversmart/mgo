@@ -28,7 +28,6 @@ install:
   - go get golang.org/x/lint/golint
 
 before_script:
-  - go mod init github.com/foreversmart/mgo
   - golint  ./... | grep -v 'ID' | cat
   - export NOIPV6=1
   - make startdb
