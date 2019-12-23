@@ -141,7 +141,7 @@ type Collection struct {
 type Query struct {
 	m       sync.Mutex
 	session *Session
-	query   // Enables default settings in session.
+	query // Enables default settings in session.
 }
 
 type query struct {
@@ -2912,7 +2912,6 @@ func (p *Pipe) SetMaxTime(d time.Duration) *Pipe {
 	return p
 }
 
-
 // Collation allows to specify language-specific rules for string comparison,
 // such as rules for lettercase and accent marks.
 // When specifying collation, the locale field is mandatory; all other collation
@@ -3885,7 +3884,7 @@ func (db *Database) run(socket *mongoSocket, cmd, result interface{}) (err error
 	if result != nil {
 		err = bson.Unmarshal(data, result)
 		if err != nil {
-			debugf("Run command unmarshaling failed: %#v", op, err)
+			debugf("Run command unmarshaling %v failed: %#v", op, err)
 			return err
 		}
 		if globalDebug && globalLogger != nil {
@@ -4727,7 +4726,7 @@ type MapReduceInfo struct {
 
 // MapReduceTime stores execution time of a MapReduce operation
 type MapReduceTime struct {
-	Total    int64 // Total time, in nanoseconds
+	Total    int64                   // Total time, in nanoseconds
 	Map      int64 `bson:"mapTime"`  // Time within map function, in nanoseconds
 	EmitLoop int64 `bson:"emitLoop"` // Time within the emit/map loop, in nanoseconds
 }
